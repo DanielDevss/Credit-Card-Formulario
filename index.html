@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Credit Card</title>
+</head>
+<body>
+    
+    <main class="creditCard">
+        <div class="creditCard__front" id="cardFront">
+            <h2 id="cardNumber">0000 0000 0000 0000</h2>
+            <span id="cardName">Nombre del titular</span>
+            <span id="cardDate">00 / 00</span>
+            <img class="cardTypeImage" id="cardType" src="images/iconDefaultType.png" width="70px" alt="tipo de tarjeta">
+        </div>
+        <div class="creditCard__back" id="cardBack">
+            <h2>CVC: <span id="cardCvc">000</span></h2>
+            <div class="line"></div>
+        </div>
+    </main>
+
+    <form class="formCard" id="form">
+        <legend>Ingrese los datos de su tarjeta</legend>
+        <div class="formCard__inputContent">
+            <label for="name"><i class="fa-regular fa-user"></i> Nombre del propietario</label>
+            <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
+        </div>
+        <div class="formCard__inputContent">
+            <label for="typeCard"><i class="fa-solid fa-building-columns"></i> Tipo de tarjeta</label>
+            <select name="typeCard" id="typeCard">
+                <option value="">-- selecciona --</option>
+                <option value="visa">Visa</option>
+                <option value="master-card">Master Card</option>
+            </select>
+        </div>
+
+        <div class="formCard__inputContent">
+            <label for="number"><i class="fa-regular fa-credit-card"></i> Número de tarjeta</label>
+            <input type="number" name="number" id="noCard" placeholder="Ingrese su número de tarjeta">
+        </div>
+        <div class="formCard__inputContent">
+            <label for="date"><i class="fa-regular fa-calendar-days"></i> Fecha de vencimiento</label>
+            <input type="text" name="date" id="date" placeholder="Ingrese la fecha de vencimiento">
+        </div>
+        <div class="formCard__inputContent">
+            <label for="firma"><i class="fa-solid fa-key"></i> No. Firma [CVV]</label>
+            <input type="number" name="firma" id="firma" placeholder="Ingrese su firma [CVV]">
+        </div>
+        <button class="formPagar">Pagar</button>
+    </form>
+
+
+    <script src="main.js"></script>
+
+
+</body>
+</html>
